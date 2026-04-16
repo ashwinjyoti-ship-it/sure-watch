@@ -6,6 +6,7 @@ import MacroBar from "@/components/MacroBar";
 import MealRow from "@/components/MealRow";
 import AddMealForm from "@/components/AddMealForm";
 import TargetsPanel from "@/components/TargetsPanel";
+import SettingsPanel from "@/components/SettingsPanel";
 
 export default function Home() {
   const today = useMemo(() => new Date(), []);
@@ -77,6 +78,9 @@ export default function Home() {
 
       {/* Targets panel */}
       <TargetsPanel targets={targets} onSave={setTargets} />
+
+      {/* Settings panel */}
+      <SettingsPanel />
     </main>
   );
 }
